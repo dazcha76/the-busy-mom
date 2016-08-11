@@ -1,7 +1,7 @@
 <h1>My Weekly Meal Planner</h1>
 
 <% @days.each do |day| %>
-  <h1><%= day.name.capitalize %></h1>
+  <h1><a href="/meals/<%= day.id %>"><%= day.name.capitalize %></a></h1>
   <% day.recipes.each do |recipe| %>
     <% recipe.categories.each do |category| %>
       <h2><%= category.name.capitalize %></h2>
