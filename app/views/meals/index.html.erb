@@ -1,0 +1,13 @@
+<h1>My Weekly Meal Planner</h1>
+
+<% @days.each do |day| %>
+  <h1><%= day.name.capitalize %></h1>
+  <% day.recipes.each do |recipe| %>
+    <% recipe.categories.each do |category| %>
+      <h2><%= category.name.capitalize %></h2>
+      <p><%= recipe.name %></p>
+    <% end %>
+  <% end %>
+<% end %>
+
+    
