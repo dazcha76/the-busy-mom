@@ -1,8 +1,10 @@
-<h1><%= @day.name.capitalize %>'s Meals</h1>
+<h1><%= @day.name %>'s Meals</h1>
 
-<% @recipes.each do |recipe| %>
-  <% recipe.categories.each do |category| %>
-    <h2><%= category.name.capitalize %></h2>
-    <p><%= recipe.name %></p>
-  <% end %>
-<% end %>
+<% @categories.each do |category| %>
+  <h3><%= category.name %></h3>
+    <% @day.day_recipes.each do |day_recipe| %>
+      <% if day_recipe.category == category %>
+        <p><%= day_recipe.recipe.name %></p>
+      <% end %>
+    <% end %>
+<% end %> 

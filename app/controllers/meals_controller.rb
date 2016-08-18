@@ -1,15 +1,15 @@
 class MealsController < ApplicationController
   def index
-    @days = Day.all
-    @categories = Category.all
+    @days = Day.all.order(:id)
     @recipes = Recipe.all
+    @categories = Category.all.order(:id)
     render 'index.html.erb'
   end
 
   def show
     @day = Day.find_by(id: params['id'])
-    @categories = Category.all
     @recipes = Recipe.all
+    @categories = Category.all.order(:id)
     render 'show.html.erb'
   end
 end

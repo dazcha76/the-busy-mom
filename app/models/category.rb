@@ -1,4 +1,5 @@
 class Category < ApplicationRecord
-  has_many :recipe_categories
-  has_many :recipes, through: :recipe_categories
+  has_many :day_recipes
+  has_many :recipes, through: :day_recipes
+  has_many :days, through: :day_recipes
 end

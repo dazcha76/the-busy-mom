@@ -1,11 +1,13 @@
 <h1>My Weekly Meal Planner</h1>
 
 <% @days.each do |day| %>
-  <h1><a href="/meals/<%= day.id %>"><%= day.name.capitalize %></a></h1>
-  <% day.recipes.each do |recipe| %>
-    <% recipe.categories.each do |category| %>
-      <h2><%= category.name.capitalize %></h2>
-      <p><%= recipe.name %></p>
+  <h2><a href="/meals/<%= day.id %>"><%= day.name %></a></h2>
+  <% @categories.each do |category| %>
+    <h3><%= category.name %></h3>
+    <% day.day_recipes.each do |day_recipe| %>
+      <% if day_recipe.category == category %>
+        <p><%= day_recipe.recipe.name %></p>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>
