@@ -9,13 +9,6 @@ class MealsController < ApplicationController
   end
 
   def create
-    recipe = Recipe.create(
-      name: params['name'],
-      image: params['image'],
-      prep_time: params['prep_time'],
-      directions: params['directions']
-    )
-    redirect_to '/meals'
   end
 
   def show
