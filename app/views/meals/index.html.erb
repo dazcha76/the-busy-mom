@@ -1,5 +1,7 @@
 <h1>My Weekly Meal Planner</h1>
 
+Add Recipies | View Recipes | Assign Recipes
+
 <% @days.each do |day| %>
   <h2><a href="/meals/<%= day.id %>"><%= day.name %></a></h2>
   <% @categories.each do |category| %>
@@ -11,5 +13,3 @@
     <% end %>
   <% end %>
 <% end %>
-
-<a href="/meals/new">Add Recipe</a>

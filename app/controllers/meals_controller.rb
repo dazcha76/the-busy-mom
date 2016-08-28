@@ -6,6 +6,9 @@ class MealsController < ApplicationController
   end
 
   def new
+    @days = Day.all.order(:id)
+    @recipes = Recipe.all
+    @categories = Category.all.order(:id)
   end
 
   def create
@@ -14,6 +17,7 @@ class MealsController < ApplicationController
   def show
     @day = Day.find_by(id: params['id'])
     @recipes = Recipe.all
+    @ingredients = Ingredient.all
     @categories = Category.all.order(:id)
   end
 end

@@ -1,1 +1,13 @@
-<h1>Plan Your Week</h1>
+<h1>Start Planning Your Week</h1>
+
+Add Recipies | View Recipes | Assign Recipes
+
+<%= form_tag '/meals', method: :post do %>
+  <% @days.each do |day| %>
+    <h2><a href="/meals/<%= day.id %>"><%= day.name %></a></h2>
+    <% @categories.each do |category| %>
+      <h3><%= category.name %></h3>
+      <%= text_field_tag :name %> <%= submit_tag "Add" %>
+    <% end %>
+  <% end %>
+<% end %>

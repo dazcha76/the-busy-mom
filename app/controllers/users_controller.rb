@@ -13,7 +13,13 @@ class UsersController < ApplicationController
       password: params[:password],
       password_confirmation: params[:password_confirmation]
     )
-    user.save
-    redirect_to 'index.html.erb'
+    if user.save
+      session[:user_id] = user.id
+      flash[:success] = 'Successfully created account!'
+      redirect_to '/users'
+    else
+      flash[:warning] = 'Invalid email or password!'
+      redirect_to '/users/new'
+    end
   end
 end

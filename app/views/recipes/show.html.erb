@@ -6,7 +6,7 @@
 
 <p><h3>Ingredients:</h3></p>
 <% @ingredients.each do |ingredient| %>
-  <p><%= ingredient.name %></p>
+  <li><%= ingredient.count %> <%= ingredient.measurement %> <%= ingredient.name %></li>
 <% end %>
 
 <p><h3>Directions:</h3></p>
