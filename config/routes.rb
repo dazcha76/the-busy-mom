@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get '/recipes' => 'recipes#index'
   get '/recipes/new' => 'recipes#new'
-  get '/recipes' => 'recipes#create'
+  post '/recipes' => 'recipes#create'
   get '/recipes/:id' => 'recipes#show'
 
   get '/meals' => 'meals#index'

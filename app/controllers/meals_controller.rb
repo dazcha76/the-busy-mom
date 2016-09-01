@@ -12,6 +12,18 @@ class MealsController < ApplicationController
   end
 
   def create
+    DayRecipe.destroy_all
+    params[:recipe_data].each do |day_id, category_data|
+      category_data.each do |category_id, recipe_array|
+        day_recipe = DayRecipe.new(
+            day_id: day_id,
+            category_id: category_id,
+            recipe_id: recipe_array[0]
+          )
+        day_recipe.save
+      end
+    end
+    redirect_to '/meals'
   end
 
   def show

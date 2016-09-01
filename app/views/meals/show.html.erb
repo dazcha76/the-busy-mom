@@ -2,4 +2,9 @@
 
 <% @categories.each do |category| %>
   <h3><%= category.name %></h3>
+    <% @day.day_recipes.each do |day_recipe| %>
+      <% if day_recipe.category == category %>
+        <p><%= day_recipe.recipe.name %></p>
+      <% end %>
+    <% end %>
 <% end %> 

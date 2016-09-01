@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   def index
+    @users = User.all
+    @family_members = FamilyMember.all
   end
 
   def new
