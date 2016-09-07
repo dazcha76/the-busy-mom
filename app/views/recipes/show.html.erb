@@ -2,13 +2,32 @@
 
 <p><%= @recipe.image %></p>
 
-<p><h3>Prep Time:</h3> <%= @recipe.prep_time %></p>
+<h3>Prep Time:</h3> 
+
+<ul>
+  <%= @recipe.prep_time %> minutes
+</ul>
 
 <p><h3>Ingredients:</h3></p>
 
-<p><% @ingredients.each do |ingredient| %></p>
-  <%= ingredient.name %>
-<% end %>
+<ul>
+  <% @recipe.ingredients.each do |ingredient| %>
+    <li><%= ingredient.count %> <%= ingredient.name %> <%= ingredient.measurement %></li>
+  <% end %>
+</ul>
 
 <p><h3>Directions:</h3></p>
-<p><%= @recipe.directions %></p>
+
+<ol>
+  <% @recipe.directions.split(";").each do |step| %>
+    <li><%= step %></li>
+  <% end %>
+</ol>
+
+<div>
+  <a href="/recipes/<%= @recipe.id %>/edit">Edit</a>
+</div>
+<div>
+  <%= link_to "Delete", "/recipes/#{@recipe.id}", method: :delete %>
+</div>
+
