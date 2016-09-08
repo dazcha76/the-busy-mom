@@ -6,8 +6,7 @@
     <%= text_field_tag :name  %>
   </div>
   <div>
-    <%= label_tag :image  %>
-    <%= text_field_tag :image  %>
+    Image: <%= file_field_tag 'picture' %>
   </div>
   <div>
     <%= label_tag :prep_time %>
@@ -17,6 +16,19 @@
     <%= label_tag :directions  %>
     <%= text_field_tag :directions  %>
   </div>
+
+<%= check_box_tag(:meal_type) %>
+<%= label_tag(:meal_type, "Breakfast") %>
+
+<%= check_box_tag(:meal_type) %>
+<%= label_tag(:meal_type, "Lunch") %>
+
+<%= check_box_tag(:meal_type) %>
+<%= label_tag(:meal_type, "Dinner") %>
+
+<%= check_box_tag(:meal_type) %>
+<%= label_tag(:meal_type, "Snack") %>
+
   <div>
     <%= submit_tag "Add recipe" %>
   </div>

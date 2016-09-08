@@ -1,9 +1,11 @@
 class RecipesController < ApplicationController
   def index
+    @title = "#{current_user.first_name}'s Recipes"
     @recipes = Recipe.all.order(:name)
   end
 
   def new
+    @title = "Add a New Recipe"
   end
 
   def create
@@ -19,10 +21,12 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find_by(id: params['id'])
+    @title = "#{@recipe.name}"
     @ingredients = Ingredient.all.order(:name)
   end
 
   def edit
+    @title = "Edit Your Recipe"
     @recipe = Recipe.find_by(id: params['id'])
   end
 

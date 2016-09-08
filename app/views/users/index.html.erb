@@ -1,15 +1,100 @@
-<h1>Welcome <%= current_user.first_name %>!</h1>
+<!-- Family Start -->
+          
+<div class="dishes padd">
+  <div class="container">
+    <!-- Default Heading -->
+    <div class="default-heading">
+      <!-- Crown image -->
+      <img class="img-responsive" src="img/crown.png" alt="" />
+      <!-- Heading -->
+      <h2>My Family</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6"> 
+        <div class="dishes-item-container">
 
-<h2>My Family</h2>
+          <!-- Danika -->
+          <div class="img-frame">
+            <!-- Image -->
+            <img src="img/dish/dish5.jpg" class="img-responsive" alt="" />
+            <!-- Block for on hover effect to image -->
+            <div class="img-frame-hover">
+              <!-- Hover Icon -->
+              <a href="#"><i class="fa fa-cutlery"></i></a>
+            </div>
+          </div>
+          <!-- Dish Details -->
+          <div class="dish-details">
+            <!-- Heading -->
+            <h3><%= current_user.first_name %></h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="dishes-item-container">
 
-<div>
-  Me
-  <% @family_members.each do |family_member| %>
-    <%= family_member.first_name %>
-  <% end %>
-</div>
+                  <!-- Michel -->
+                  <div class="img-frame">
+                    <!-- Image -->
+                    <img src="img/dish/dish6.jpg" class="img-responsive" alt="" />
+                    <!-- Block for on hover effect to image -->
+                    <div class="img-frame-hover">
+                      <!-- Hover Icon -->
+                      <a href="#"><i class="fa fa-cutlery"></i></a>
+                    </div>
+                  </div>
+                  <!-- Dish Details -->
+                  <div class="dish-details">
+                    <!-- Heading -->
+                    <h3><%= @family_members[0].first_name %></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="dishes-item-container">
 
+                  <!-- Michael -->
+                  <div class="img-frame">
+                    <!-- Image -->
+                    <img src="img/dish/dish7.jpg" class="img-responsive" alt="" />
+                    <!-- Block for on hover effect to image -->
+                    <div class="img-frame-hover">
+                      <!-- Hover Icon -->
+                      <a href="#"><i class="fa fa-cutlery"></i></a>
+                    </div>
+                  </div>
+                  <!-- Dish Details -->
+                  <div class="dish-details">
+                    <!-- Heading -->
+                    <h3><%= @family_members[1].first_name %></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="dishes-item-container">
 
+                  <!-- Matthew -->
+                  <div class="img-frame">
+                    <!-- Image -->
+                    <img src="img/dish/dish8.jpg" class="img-responsive" alt="" />
+                    <!-- Block for on hover effect to image -->
+                    <div class="img-frame-hover">
+                      <!-- Hover Icon -->
+                      <a href="#"><i class="fa fa-cutlery"></i></a>
+                    </div>
+                  </div>
+                  <!-- Dish Details -->
+                  <div class="dish-details">
+                    <!-- Heading -->
+                    <h3><%= @family_members[2].first_name %></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+        
+<!-- Family End -->
 
 <div><h2>Activity Planner</h2></div>
 <div><h2>Budget Planner</h2></div>
@@ -18,3 +103,5 @@
 <div><h2><a href="/meals">Meal Planner</a></h2></div>
 
 <a href="/logout">Logout</a>
+
+

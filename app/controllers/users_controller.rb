@@ -2,9 +2,11 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @family_members = FamilyMember.all
+    @title = "Welcome #{current_user.first_name}!"
   end
 
   def new
+    @title = "Register"
   end
 
   def create

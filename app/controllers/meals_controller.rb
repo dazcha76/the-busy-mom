@@ -1,11 +1,13 @@
 class MealsController < ApplicationController
   def index
+    @title = "#{current_user.first_name}'s Meal Planner"
     @days = Day.all.order(:id)
     @recipes = Recipe.all
     @categories = Category.all.order(:id)
   end
 
   def new
+    @title = "Start Planning Your Week"
     @days = Day.all.order(:id)
     @recipes = Recipe.all
     @categories = Category.all.order(:id)
@@ -28,6 +30,7 @@ class MealsController < ApplicationController
 
   def show
     @day = Day.find_by(id: params['id'])
+    @title = "#{@day.name}'s Meals"
     @recipes = Recipe.all
     @ingredients = Ingredient.all
     @categories = Category.all.order(:id)
