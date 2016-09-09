@@ -1,33 +1,62 @@
-<h1><%= @recipe.name %></h1>
-
 <p><%= @recipe.image %></p>
 
-<h3>Prep Time:</h3> 
+<!-- Inner Content -->
+      <div class="inner-page padd">
+      
+        <!-- Recipe Start -->
+        
+        <div class="recipe">
+          <div class="container">
+            <!-- Recipe contents -->
+            <div class="recipe-content">
+              <!-- Recipe Name / Heading -->
+              <div class="row">
+                <div class="col-md-4 col-sm-6">
+                  <h4><%= @recipe.name %></h4> 
+                  <div class="recipe-item">
+                    <!-- Food image -->
+                    <img class="img-responsive" src="/img/dish/dish2.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                  <!-- Recipe Items -->
+                  <div class="recipe-item">
+                    <!-- Heading -->
+                    <h4>Ingredients :</h4>
 
-<ul>
-  <%= @recipe.prep_time %> minutes
-</ul>
-
-<p><h3>Ingredients:</h3></p>
-
-<ul>
-  <% @recipe.ingredients.each do |ingredient| %>
-    <li><%= ingredient.count %> <%= ingredient.measurement %> <%= ingredient.name %></li>
-  <% end %>
-</ul>
-
-<p><h3>Directions:</h3></p>
-
-<ol>
-  <% @recipe.directions.split(";").each do |step| %>
-    <li><%= step %></li>
-  <% end %>
-</ol>
+                    <!-- Recipe ingredients -->
+                    <ul class="list-unstyled">
+                      <% @recipe.ingredients.each do |ingredient| %>
+                      <li>
+                        <i class="fa fa-check"></i> <%= ingredient.name %> <span class="pull-right"> <%= ingredient.count %> <%= ingredient.measurement %> </span>
+                        <div class="clearfix"></div>
+                      </li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                  <!-- Recipe Items -->
+                  <div class="recipe-item">
+                    <!-- Heading -->
+                    <h4>Directions (<%= @recipe.prep_time %> mins) :</h4>
+                    <!-- Recipe Description -->
+                    <div class="recipe-description">
+                      <ol>
+                        <% @recipe.directions.split(";").each do |step| %>
+                          <li><%= step %></li>
+                        <% end %>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- / Inner Page Content End --> 
 
 <div>
   <a href="/recipes/<%= @recipe.id %>/edit">Edit</a>
-</div>
-<div>
   <%= link_to "Delete", "/recipes/#{@recipe.id}", method: :delete %>
 </div>
-

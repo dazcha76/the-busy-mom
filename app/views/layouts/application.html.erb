@@ -71,54 +71,27 @@
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                      <li><a href="index.html"><img src="/img/nav-menu/nav1.jpg" class="img-responsive" alt="" /> Home</a></li>
+                      <li><a href="/users"><img src="/img/nav-menu/nav1.jpg" class="img-responsive" alt="" /> Home</a></li>
+
+                      <li><a href="/activities"><img src="/img/nav-menu/nav1.jpg" class="img-responsive" alt="" /> Activities</a></li>
+
+                      <li><a href="/budget"><img src="/img/nav-menu/nav1.jpg" class="img-responsive" alt="" /> Budget</a></li>
+
+                      <li><a href="/calendar"><img src="/img/nav-menu/nav1.jpg" class="img-responsive" alt="" /> Calendar</a></li>
+
+                      <li><a href="/chores"><img src="/img/nav-menu/nav1.jpg" class="img-responsive" alt="" /> Chores</a></li>
+
+                      <li><a href="/meals"><img src="/img/nav-menu/nav1.jpg" class="img-responsive" alt="" /> Meals</a></li>
 
                       <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/img/nav-menu/nav4.jpg" class="img-responsive" alt="" /> Activities <b class="caret"></b></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown"><img src="/img/nav-menu/nav4.jpg" class="img-responsive" alt="" /> Moms <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                          <li><a href="items.html">Shopping</a></li>
-                          <li><a href="item-single.html">Order Now</a></li>
-                          <li><a href="checkout.html">Checkout</a></li>
+                          <li><a href="/users/new">Register</a></li>
+                          <li><a href="/login">Login</a></li>
+                          <li><a href="logout">Logout</a></li>
                         </ul>
                       </li>
 
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/img/nav-menu/nav4.jpg" class="img-responsive" alt="" /> Budget <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="items.html">Shopping</a></li>
-                          <li><a href="item-single.html">Order Now</a></li>
-                          <li><a href="checkout.html">Checkout</a></li>
-                        </ul>
-                      </li>
-
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/img/nav-menu/nav4.jpg" class="img-responsive" alt="" /> Calendar <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="items.html">Shopping</a></li>
-                          <li><a href="item-single.html">Order Now</a></li>
-                          <li><a href="checkout.html">Checkout</a></li>
-                        </ul>
-                      </li>
-
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/img/nav-menu/nav5.jpg" class="img-responsive" alt="" /> Chores <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="error.html">404 Error</a></li>
-                          <li><a href="0-base.html">Blank Page</a></li>
-                          <li><a href="blog.html">Blog</a></li>
-                        </ul>
-                      </li>
-
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/img/nav-menu/nav4.jpg" class="img-responsive" alt="" /> Meals <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="items.html">Shopping</a></li>
-                          <li><a href="item-single.html">Order Now</a></li>
-                          <li><a href="checkout.html">Checkout</a></li>
-                          <li><a href="reserve-seats.html">Reservation</a></li>
-                          <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                      </li>
                     </ul>
                   </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -134,11 +107,13 @@
       
       <div class="banner padd">
         <div class="container">
+          <br>
           <!-- Image -->
           <img class="img-responsive" src="/img/crown-white.png" alt="" />
           <!-- Heading -->
+
           <h2 class="white"><%= @title %></h2>
-          <p>Start organizing your life in one place!</p>
+          <br><br>
           <div class="clearfix"></div>
         </div>
       </div>
@@ -147,56 +122,14 @@
       
       <%= yield %>
       
-      <!-- Inner Content -->
-      <div class="inner-page padd">
-      
-        <!-- Showcase Start -->
-        
-        <div class="showcase">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 col-sm-6">
-                <!-- Showcase section item -->
-                <div class="showcase-item">
-                  <!-- Image -->
-                  <img class="img-responsive" src="/img/fruit2.png" alt="" />
-                  <!-- Heading -->
-                  <h3><a href="#">Equine Porno Sumos</a></h3>
-                  <!-- Paragraph -->
-                  <p>Nam libero tempore, cum soluta nobis est minis voluptas assum simple and easy to distinguis quo.</p>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6">
-                <!-- Showcase section item -->
-                <div class="showcase-item">
-                  <!-- Image -->
-                  <img class="img-responsive" src="/img/fruit3.png" alt="" />
-                  <!-- Heading -->
-                  <h3><a href="#">Equine Porno Sumos</a></h3>
-                  <!-- Paragraph -->
-                  <p>Nam libero tempore, cum soluta nobis est minis voluptas assum simple and easy to distinguis quo.</p>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Showcase End -->
-        
-      </div><!-- / Inner Page Content End --> 
-      
       <!-- Footer Start -->
       
       <div class="footer padd">
-        <div class="container">
           <!-- Copyright -->
           <div class="footer-copyright">
             <!-- Paragraph -->
-            <p>&copy; Copyright 2016 <a href="#">TheBusyMom</a></p>
+            <p>&copy; Copyright 2016 <a href="/">TheBusyMom</a></p>
           </div>
-        </div>
       </div>
       
       <!-- Footer End -->

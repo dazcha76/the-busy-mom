@@ -1,3 +1,30 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#register {
+   background-color: white;
+   width: 400px;
+   margin: 50px auto 0 auto;
+   padding: 20px;
+   border: 1px solid #d43f3a;
+   box-shadow: 15px 15px 15px #d43f3a;
+   } 
+
+input {
+  display: block;
+  height: 30px;
+  width: 300px;
+  margin: 0 0 15px 0;
+  border: 1px solid #da0800;
+  font-size: 16px;
+  font-family: "microsoft sans serif";
+  padding: 5px 5px 5px 10px;
+}
+
+input.submit-login {
+  color: white;
+  background-color: #da0800;
+  height: 40px;
+  width: 110px;
+}

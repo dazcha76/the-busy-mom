@@ -1,20 +1,60 @@
 <div ng-app="app">
-    {{ 2 + 2 }}
   <div ng-controller="recipesCtrl">
-    {{ message }}
 
     <input>
     <button>Search</button>
   </div>
 </div>
 
-<h1>My Recipes</h1>
-
 <a href="/recipes/new">Add Recipe</a>
 
-<% @recipes.each do |recipe| %>
-  <h3><a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a></h3>
-  <p><%= recipe.image %></p>
-  <p>Prep Time: <%= recipe.prep_time %></p>
-  <p><%= recipe.rating %></p>
-<% end %>
+
+<!-- Inner Content -->
+      <div class="inner-page padd">
+
+<!-- Shopping Start -->
+        <div class="shopping">
+          <div class="container">
+            <!-- Shopping items content -->
+            <div class="shopping-content">
+              <div class="row">
+              <% @recipes.each do |recipe| %>
+
+                <div class="col-md-3 col-sm-6">
+                  <!-- Shopping items -->
+                  <div class="shopping-item">
+                    <!-- Image -->
+                    <a href="/recipes/<%= recipe.id %>"><img class="img-responsive" src="<%= recipe.image %>" alt="" /></a>
+                    <!-- Shopping item name / Heading -->
+                    <h4 class="pull-left"><a href="item-single.html"><%= recipe.name %></a></h4>
+                    <div class="clearfix"></div>
+                    <!-- Paragraph -->
+                    <p><%= recipe.rating %></p>
+                    <!-- Shopping item hover block & link -->
+                    <div class="item-hover br-red hidden-xs"></div>
+                    <a class="link hidden-xs" href="/recipes/<%= recipe.id %>"> <%= recipe.prep_time %> mins.</a>
+                  </div>
+                </div>
+
+                <% end %>
+              </div>
+
+              <!-- Pagination -->
+              <div class="shopping-pagination">
+                <ul class="pagination">
+                  <li class="disabled"><a href="#">&laquo;</a></li>
+                  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">&raquo;</a></li>
+                </ul>
+              </div>
+              <!-- Pagination end-->
+            </div>
+          </div>
+        </div>
+        
+        <!-- Shopping End -->
+      </div><!-- / Inner Page Content End --> 

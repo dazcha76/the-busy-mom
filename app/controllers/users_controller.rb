@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def new
-    @title = "Register"
+    @title = "The Busy Mom"
   end
 
   def create

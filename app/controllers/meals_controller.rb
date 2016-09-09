@@ -1,6 +1,6 @@
 class MealsController < ApplicationController
   def index
-    @title = "#{current_user.first_name}'s Meal Planner"
+    @title = "#{current_user.first_name}'s Meals"
     @days = Day.all.order(:id)
     @recipes = Recipe.all
     @categories = Category.all.order(:id)
